@@ -1,0 +1,18 @@
+[submodule "xz"]
+	path = xz
+    url = https://github.com/xz-mirror/xz.git
+[submodule "boost"]
+	path = boost
+    url = https://github.com/boostorg/boost.git
+[submodule "bzip2"]
+	path = bzip2
+    url = git://sourceware.org/git/bzip2.git
+[submodule "icu"]
+	path = icu
+    url = https://github.com/unicode-org/icu.git
+[submodule "zlib"]
+	path = zlib
+    url = https://github.com/madler/zlib.git
+[submodule "zstd"]
+	path = zstd
+    url = https://github.com/facebook/zstd.git
