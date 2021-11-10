@@ -30,6 +30,7 @@ elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
 else()
 endif()
 
+set(HAS_THIRDPARTY_BOOST ON PARENT_SCOPE)
 
 function(boostMain)
     set(BOOST_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/boost")
@@ -151,6 +152,7 @@ function(boostMain)
         thirdparty_boost_circularbuffer
         thirdparty_boost_endian
         thirdparty_boost_thread
+        thirdparty_boost_align
         )
 endfunction()
 
@@ -600,8 +602,6 @@ function(importBoostInterfaceLibraries)
         "function_types:config"
         "tti:function_types"
         "uuid:random,tti"
-        # "asio:config,thirdparty_openssl"
-        "asio:config"
         "any:config"
         "foreach:config"
         "multi_index:foreach"
@@ -647,6 +647,13 @@ function(importBoostInterfaceLibraries)
         "typeof:config"
         "align:config"
         )
+
+    if (HAS_THIRDPARTY_OPENSSL)
+        message(STATUS "boost_asio base on openssl")
+        list(APPEND library_descriptor_list "asio:config,thirdparty_openssl")
+    else()
+        list(APPEND library_descriptor_list "asio:config")
+    endif()
 
     add_library(thirdparty_boost_config INTERFACE)
     target_include_directories(thirdparty_boost_config SYSTEM INTERFACE
