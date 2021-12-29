@@ -155,6 +155,7 @@ function(boostMain)
         thirdparty_boost_thread
         thirdparty_boost_align
         thirdparty_boost_log
+        thirdparty_boost_log_setup
         )
 endfunction()
 
