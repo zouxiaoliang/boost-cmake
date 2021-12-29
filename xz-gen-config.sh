@@ -28,8 +28,8 @@ cd xz
 platform=$(uname -m)
 os=$(uname -s| awk '{print tolower($0)}')
 
-# ./autogen.sh
-# ./configure --disable-xz --disable-xzdec --disable-lzmadec --disable-lzma-links --disable-scripts --disable-doc --enable-static --enable-encoders=lzma1,lzma2,x86,arm,armthumb
+./autogen.sh
+./configure --disable-xz --disable-xzdec --disable-lzmadec --disable-lzma-links --disable-scripts --disable-doc --enable-static --enable-encoders=lzma1,lzma2,x86,arm,armthumb
 
 mkdir -p ${DIR}/config/xz/${platform}/${os}
 
