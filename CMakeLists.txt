@@ -154,6 +154,7 @@ function(boostMain)
         thirdparty_boost_endian
         thirdparty_boost_thread
         thirdparty_boost_align
+        thirdparty_boost_log
         )
 endfunction()
 
@@ -1835,7 +1836,7 @@ function(generateBoostLog)
             thirdparty_boost_config
             thirdparty_boost_container
             thirdparty_boost_core
-            thirdparty_boost_date_time
+            thirdparty_boost_datetime
             thirdparty_boost_filesystem
             thirdparty_boost_functiontypes
             thirdparty_boost_fusion
@@ -1849,12 +1850,12 @@ function(generateBoostLog)
             thirdparty_boost_preprocessor
             thirdparty_boost_proto
             thirdparty_boost_range
-            thirdparty_boost_smart_ptr
-            thirdparty_boost_static_assert
+            thirdparty_boost_smartptr
+            thirdparty_boost_staticassert
             thirdparty_boost_system
-            thirdparty_boost_throw_exception
-            thirdparty_boost_type_index
-            thirdparty_boost_type_traits
+            thirdparty_boost_throwexception
+            thirdparty_boost_typeindex
+            thirdparty_boost_typetraits
             thirdparty_boost_utility
             thirdparty_boost_winapi
             thirdparty_boost_typeof
@@ -1864,7 +1865,7 @@ function(generateBoostLog)
             thirdparty_boost_bind
             thirdparty_boost_exception
             thirdparty_boost_interprocess
-            thirdparty_boost_lexical_cast
+            thirdparty_boost_lexicalcast
             thirdparty_boost_optional
             thirdparty_boost_random
             thirdparty_boost_spirit
@@ -1925,15 +1926,15 @@ function(generateBoostLog)
         thirdparty_boost_config
         thirdparty_boost_core
         thirdparty_boost_iterator
-        thirdparty_boost_lexical_cast
+        thirdparty_boost_lexicalcast
         thirdparty_boost_move
         thirdparty_boost_optional
         thirdparty_boost_parameter
         thirdparty_boost_phoenix
         thirdparty_boost_preprocessor
         thirdparty_boost_propertytree
-        thirdparty_boost_smart_ptr
-        thirdparty_boost_type_traits
+        thirdparty_boost_smartptr
+        thirdparty_boost_typetraits
     )
 
     if (NOT BOOST_LOG_WITHOUT_SETTINGS_PARSERS)
@@ -1977,12 +1978,12 @@ function(generateBoostLog)
             PRIVATE
                 thirdparty_boost_asio
                 thirdparty_boost_bind
-                thirdparty_boost_date_time
+                thirdparty_boost_datetime
                 thirdparty_boost_exception
                 thirdparty_boost_filesystem
                 thirdparty_boost_io
                 thirdparty_boost_spirit
-                thirdparty_boost_throw_exception
+                thirdparty_boost_throwexception
                 thirdparty_boost_utility
                 thirdparty_boost_serialization
                 thirdparty_boost_variant
