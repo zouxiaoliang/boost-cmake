@@ -1069,7 +1069,13 @@ function(generateBoostContext)
             "${library_root}/src/asm/make_arm64_aapcs_elf_gas.S"
             "${library_root}/src/asm/ontop_arm64_aapcs_elf_gas.S"
             )
-    elseif(DEFINED PLATFORM_MACOS)
+    elseif(DEFINED PLATFORM_MACOS AND TARGET_PROCESSOR STREQUAL "arm64")
+        set(asm_source_file_list
+            "${library_root}/src/asm/jump_arm64_aapcs_macho_gas.S"
+            "${library_root}/src/asm/make_arm64_aapcs_macho_gas.S"
+            "${library_root}/src/asm/ontop_arm64_aapcs_macho_gas.S"
+            )
+    elseif(DEFINED PLATFORM_MACOS AND TARGET_PROCESSOR STREQUAL "x86_64")
         set(asm_source_file_list
             "${library_root}/src/asm/jump_x86_64_sysv_macho_gas.S"
             "${library_root}/src/asm/make_x86_64_sysv_macho_gas.S"
