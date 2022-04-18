@@ -1111,7 +1111,7 @@ function(generateBoostContext)
         endif()
     endforeach()
 
-    if(OSQUERY_ENABLE_ADDRESS_SANITIZER)
+    if(ENABLE_ADDRESS_SANITIZER)
         list(APPEND source_files
             "${library_root}/src/fiber.cpp"
             )
